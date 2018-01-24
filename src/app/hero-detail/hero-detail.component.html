@@ -1,0 +1,18 @@
+<div *ngIf="hero">
+  <h2>TO {{ hero.name | uppercase }}</h2>
+  <div>
+    <span>
+      {{hero.name}}:<input [(ngModel)]="vfrom" (input)="conv($event)" placeholder="saisir une valeur"/>
+      {{devises[to]}}:<input [(ngModel)]="vto" disabled />
+
+    </span>
+  </div>
+  <button (click)="goBack()">go back</button>
+</div>
+
+
+<!-- 
+Copyright 2017-2018 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->

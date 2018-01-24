@@ -1,0 +1,27 @@
+<h2>FROM</h2>
+<nav>
+  <a *ngIf="idFrom!=0" (click)="onClickFrom(0)">EURO</a>
+  <a *ngIf="idFrom!=1" (click)="onClickFrom(1)">CFA</a>
+  <a *ngIf="idFrom!=2" (click)="onClickFrom(2)">DOLLAR</a> 
+</nav>
+<div *ngIf='idFrom>=0'>
+    <h2>TO </h2>
+<div *ngFor="let e of devises">
+    <span *ngIf="e.id!=idFrom" class="heroes" (click)="onClickTo(e)" >
+      <p>{{e.name}}</p>
+    </span> 
+    </div>
+    <div *ngIf="to">
+        <div>
+          <span>
+            {{devise.name}}:<input [(ngModel)]="vfrom" (input)="conv($event)" placeholder="saisir une valeur"/>
+            {{to.name}}:<input [(ngModel)]="vto" disabled />
+          </span>
+        </div>
+        <button (click)="goBack()">go back</button>
+      </div>
+    </div>
+
+<!-- 
+Copyright 2017-2018 Google Inc. All Rights Reserved.
+-->
